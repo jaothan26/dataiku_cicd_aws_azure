@@ -11,12 +11,6 @@ target_project = client.get_project("DKU_CHURN")
 
 # Getting the currently active bundle
 previous_bundle_id = ""
-for project in client.list_projects():
-    if project['DKU_CHURN'] == project_key:
-        print(project)
-        if 'activeBundleState' in project:
-            previous_bundle_id = project['activeBundleState']['bundleId']
-            break
 
 if not previous_bundle_id:
     print("Cannot find a current active bundle , assuming it is a new project (no rollback possible)")

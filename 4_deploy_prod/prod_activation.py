@@ -7,7 +7,7 @@ projectkey = sys.argv[3]
 bundle_file = sys.argv[4] + '.zip'
 
 client = dataikuapi.DSSClient(host, apiKey)
-target_project = client.get_project(project_key)
+target_project = client.get_project(ProjectKey)
 
 # Getting the currently active bundle
 previous_bundle_id = ""

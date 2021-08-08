@@ -12,7 +12,7 @@ target_project = client.get_project("DKU_CHURN")
 # Getting the currently active bundle
 previous_bundle_id = ""
 for project in client.list_projects():
-    if project['projectKey'] == project_key:
+    if project['DKU_CHURN'] == project_key:
         print(project)
         if 'activeBundleState' in project:
             previous_bundle_id = project['activeBundleState']['bundleId']
